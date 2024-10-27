@@ -1,10 +1,15 @@
 <hr>
 <div class="centrar">
-  <% @versiculo.each do |palabra| %>
+
+  <% @versiculo.each_with_index do |palabra, idx| %>
+
+    <%= idx%>
 
     <span class="<%= palabra ==  'rey' ? 'actual' : 'letra' %>">
       <%= palabra %>
     </span>
+
   <% end %>
+
 </div>
 <hr>
