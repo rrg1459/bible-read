@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_25_211622) do
-  create_table "biblia", force: :cascade do |t|
+ActiveRecord::Schema[7.1].define(version: 2024_10_27_185357) do
+  create_table "historicos", force: :cascade do |t|
+    t.integer "versiculo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "libros", force: :cascade do |t|
+    t.integer "testamento_id"
+    t.text "nombre"
+    t.text "abreviacion"
+    t.integer "capitulos"
+  end
+
+  create_table "testamentos", force: :cascade do |t|
+    t.text "nombre"
+  end
+
+  create_table "versiculos", force: :cascade do |t|
+    t.integer "libro_id"
+    t.integer "capitulo"
+    t.integer "versiculo"
+    t.text "texto"
+    t.index ["libro_id", "capitulo"], name: "_libro_id_capitulo"
+  end
+
+  add_foreign_key "libros", "testamentos"
+  add_foreign_key "versiculos", "libros"
 end

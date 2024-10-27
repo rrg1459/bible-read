@@ -1,1 +1,29 @@
 @import "bootstrap";
+
+
+.letra {
+  font-size: 32px;
+  // color: white;
+  color: #333;
+  // -webkit-text-stroke: 1px #F8F8F8;
+  -webkit-text-stroke: 1px #282828;
+  text-shadow: 0px 1px 4px #23430C;
+
+}
+
+.actual {
+  color: #333;
+  font-size: 40px;
+  -webkit-text-stroke: 1px #282828;
+  text-shadow: 0px 4px 4px red;
+}
+
+// https://kinsta.com/es/blog/contorno-texto-css/
+
+.centrar {
+  // background-color: blue;
+  // display:flex;
+  // justify-content: center;
+  // align-items: center;
+  text-align: center;
+}

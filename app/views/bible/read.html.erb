@@ -1,2 +1,10 @@
-<h1>Bible#read</h1>
-<p>Find me in app/views/bible/read.html.erb</p>
+<hr>
+<div class="centrar">
+  <% @versiculo.each do |palabra| %>
+
+    <span class="<%= palabra ==  'rey' ? 'actual' : 'letra' %>">
+      <%= palabra %>
+    </span>
+  <% end %>
+</div>
+<hr>
